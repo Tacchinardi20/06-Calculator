@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: lightpink;
+        }
+    </style>
+
+    <script>
+        const callmultiply =() => {
+            let aa = document.getElementById("val01").value;
+            let bb = document.getElementById("val02").value;
+            let cc = parseInt(aa) * parseInt(bb);
+
+            document.getElementById("showtxt").innerHTML=cc;
+        }
+
+        const callplus =() => {
+            let aa = document.getElementById("val03").value;
+            let bb = document.getElementById("val04").value;
+            let cc = parseInt(aa) + parseInt(bb);
+
+            document.getElementById("showtxt").innerHTML=cc;
+        }
+
+        const callminus =() => {
+            let aa = document.getElementById("val05").value;
+            let bb = document.getElementById("val06").value;
+            let cc = parseInt(aa) - parseInt(bb);
+
+            document.getElementById("showtxt").innerHTML=cc;
+        }
+
+        const calldivide =() => {
+            let aa = document.getElementById("val07").value;
+            let bb = document.getElementById("val08").value;
+            let cc = parseInt(aa) / parseInt(bb);
+
+            document.getElementById("showtxt").innerHTML=cc;
+        }
+    </script>
+</head>
+<body>
+    <br><h2>&nbsp;Calculation Result :&nbsp;&nbsp;<span id="showtxt"></span></h2><br>
+
+    &nbsp;&nbsp;<input type="text" id="val01" width="10">&nbsp;&nbsp;&#215;&nbsp;
+    <input type="text" id="val02" width="10">
+    &nbsp;<button onclick="callmultiply()">Press !!</button><br><br>
+
+    &nbsp;&nbsp;<input type="text" id="val03" width="10">&nbsp;&nbsp;&#x2B;&nbsp;
+    <input type="text" id="val04" width="10">
+    &nbsp;<button onclick="callplus()">Press !!</button><br><br>
+
+    &nbsp;&nbsp;<input type="text" id="val05" width="10">&nbsp;&nbsp;&#8722;&nbsp;
+    <input type="text" id="val06" width="10">
+    &nbsp;<button onclick="callminus()">Press !!</button><br><br>
+
+    &nbsp;&nbsp;<input type="text" id="val07" width="10">&nbsp;&nbsp;&#xf7;&nbsp;
+    <input type="text" id="val08" width="10">
+    &nbsp;<button onclick="calldivide()">Press !!</button>
+</body>
+</html>
